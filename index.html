@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parth Chorge Crane and Towing Service
+ | Heavy Lifting Solutions</title>
+    <style>
+        /* --- CSS STYLES --- */
+        :root {
+            --primary-color: #ffcc00; /* Construction Yellow */
+            --dark-color: #1a1a1a;
+            --light-bg: #f4f4f4;
+            --text-color: #333;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            scroll-behavior: smooth;
+        }
+
+        /* Navigation */
+        nav {
+            background: var(--dark-color);
+            color: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 5%;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            transition: 0.3s;
+        }
+
+        nav .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+        }
+
+        nav ul li a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 80vh;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+                        url('photos/hero_back.jpeg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: #fff;
+            padding: 0 1rem;
+        }
+
+        .hero h1 { font-size: 3.5rem; margin-bottom: 1rem; }
+        .hero p { font-size: 1.2rem; margin-bottom: 2rem; }
+
+        .btn {
+            background: var(--primary-color);
+            color: var(--dark-color);
+            padding: 0.8rem 2rem;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 4px;
+            transition: 0.3s;
+        }
+
+        .btn:hover { background: #e6b800; }
+
+        /* Sections */
+        section { padding: 5rem 10%; }
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            font-size: 2.5rem;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 5px;
+            background: var(--primary-color);
+            margin: 10px auto;
+        }
+
+        /* Why Us Grid */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background: var(--light-bg);
+            padding: 2rem;
+            border-left: 5px solid var(--primary-color);
+            border-radius: 4px;
+        }
+
+        /* Photo Gallery */
+        .photo-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1rem;
+        }
+
+        .photo-item {
+            overflow: hidden;
+            border-radius: 8px;
+            height: 250px;
+            background: #ddd;
+        }
+
+        .photo-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: 0.4s;
+            cursor: pointer;
+        }
+
+        .photo-item img:hover { transform: scale(1.1); }
+
+        /* Footer / Contact */
+        footer {
+            background: var(--dark-color);
+            color: #fff;
+            padding: 4rem 10% 2rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 3rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-content h3 { color: var(--primary-color); margin-bottom: 1rem; }
+        
+        .footer-bottom {
+            text-align: center;
+            border-top: 1px solid #444;
+            padding-top: 2rem;
+            font-size: 0.8rem;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+            nav ul { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav id="main-nav">
+        <div class="logo">Parth Chorge Crane and Towing Service
+</div>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#why-us">Why Us</a></li>
+            <li><a href="#photos">Work Photos</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header class="hero">
+        <h1>Parth Chorge Crane and Towing Service
+</h1>
+        <p>Reliable. Safe. Efficient. Lifting your vision into reality.</p>
+        <a href="#contact" class="btn">Inquire Now</a>
+    </header>
+
+    <section id="about">
+        <h2 class="section-title">About Us</h2>
+        <p style="max-width: 800px; margin: auto; text-align: center;">
+            Built on a foundation of grit and engineering skill, Parth Chorge Crane and Towing Service
+ provides comprehensive lifting and rigging services. 
+            We specialize in tackling complex lifts where precision is the only option. Our team brings the heavy machinery 
+            and the practical experience to ensure your project stays moving.
+        </p>
+    </section>
+
+    <section id="why-us" style="background-color: #fff;">
+        <h2 class="section-title">Why Us</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Field Expertise</h3>
+                <p>Our team consists of veteran operators who have spent years on active sites, handling everything from tight urban lifts to massive industrial setups.</p>
+            </div>
+            <div class="card">
+                <h3>Heavy-Duty Fleet</h3>
+                <p>We maintain a diverse range of cranes that are purpose-built for stability and strength in the most demanding environments.</p>
+            </div>
+            <div class="card">
+                <h3>Precision Focus</h3>
+                <p>We don't just move objects; we place them. We pride ourselves on millimetre-perfect placement for structural steel and delicate machinery.</p>
+            </div>
+        </div>
+    </section>
+
+<!-- 1. The Slider Section -->
+<section id="photos">
+    <h2 class="section-title">Operations in Action</h2>
+    
+    <div class="slider-wrapper">
+        <!-- Navigation Buttons -->
+        <button class="prev" onclick="manualMove(-1)">&#10094;</button>
+        <button class="next" onclick="manualMove(1)">&#10095;</button>
+
+        <div class="photo-container" id="slider">
+            <div class="photo-item"><img src="photos/1_scroll.jpeg" alt="Crane Action 1"></div>
+            <div class="photo-item"><img src="photos/2_scroll.jpeg" alt="Crane Action 2"></div>
+            <div class="photo-item"><img src="photos/3_scroll.jpeg" alt="Crane Action 3"></div>
+            <div class="photo-item"><img src="photos/4_scroll.jpeg" alt="Crane Action 4"></div>
+            <div class="photo-item"><img src="photos/5_scroll.jpeg" alt="Crane Action 5"></div>
+            <div class="photo-item"><img src="photos/6_scroll.jpeg" alt="Crane Action 6"></div>
+            <div class="photo-item"><img src="photos/7_scroll.jpeg" alt="Crane Action 7"></div>
+            <div class="photo-item"><img src="photos/8_scroll.jpeg" alt="Crane Action 8"></div>
+        </div>
+    </div>
+</section>
+
+<!-- 2. The Lightbox Modal (Hidden by default) -->
+<div id="photoModal" class="modal">
+    <span class="close-modal" onclick="closeLightbox()">&times;</span>
+    <img class="modal-content" id="fullImage">
+    <div id="caption"></div>
+</div>
+
+<!-- 3. Styles -->
+<style>
+    .slider-wrapper {
+        position: relative;
+        overflow: hidden;
+        max-width: 1200px;
+        margin: auto;
+    }
+
+    .photo-container {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+    }
+
+    .photo-item {
+        min-width: 33.333%; /* 3 photos at a time */
+        box-sizing: border-box;
+        padding: 10px;
+    }
+
+    .photo-item img {
+        width: 100%;
+        height: 350px; /* Uniform height for all images */
+        object-fit: cover; /* Crops vertical photos to fit horizontal box */
+        object-position: center;
+        display: block;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: transform 0.3s ease;
+    }
+
+    .photo-item img:hover {
+        transform: scale(1.02);
+    }
+
+    /* Navigation Buttons (Circular) */
+    .prev, .next {
+        background-color: rgba(0, 0, 0, 0.6);
+        color: white;
+        border: none;
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 10;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        font-size: 18px;
+        padding: 0;
+    }
+
+    .prev:hover, .next:hover {
+        background-color: rgba(0, 0, 0, 0.9);
+        transform: translateY(-50%) scale(1.1);
+    }
+
+    .prev { left: 15px; }
+    .next { right: 15px; }
+
+    /* Lightbox Styles */
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 2000;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.9);
+        align-items: center;
+        justify-content: center;
+    }
+
+    .modal-content {
+        max-width: 90%;
+        max-height: 85vh; /* Ensures vertical photos fit the screen */
+        border: 2px solid #fff;
+        border-radius: 4px;
+        object-fit: contain; /* Shows full photo in popup */
+    }
+
+    .close-modal {
+        position: absolute;
+        top: 20px;
+        right: 35px;
+        color: #fff;
+        font-size: 50px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    #caption {
+        position: absolute;
+        bottom: 20px;
+        color: white;
+        font-family: sans-serif;
+    }
+
+    /* Responsiveness */
+    @media (max-width: 900px) { .photo-item { min-width: 50%; } }
+    @media (max-width: 600px) { .photo-item { min-width: 100%; } }
+</style>
+
+<!-- 4. Logic -->
+<script>
+    let currentIndex = 0;
+    let autoPlayInterval;
+    const slider = document.getElementById('slider');
+
+    // --- SLIDER LOGIC ---
+    function moveSlide(direction) {
+        const items = document.querySelectorAll('.photo-item');
+        let itemsVisible = 3;
+        if (window.innerWidth <= 900) itemsVisible = 2;
+        if (window.innerWidth <= 600) itemsVisible = 1;
+
+        const maxIndex = items.length - itemsVisible;
+        currentIndex += direction;
+
+        if (currentIndex > maxIndex) {
+            currentIndex = 0;
+        } else if (currentIndex < 0) {
+            currentIndex = maxIndex;
+        }
+
+        const percentage = currentIndex * (100 / itemsVisible);
+        slider.style.transform = `translateX(-${percentage}%)`;
+    }
+
+    function manualMove(direction) {
+        stopAutoPlay();
+        moveSlide(direction);
+        startAutoPlay();
+    }
+
+    // --- AUTOPLAY LOGIC ---
+    function startAutoPlay() {
+        autoPlayInterval = setInterval(() => moveSlide(1), 3000);
+    }
+
+    function stopAutoPlay() {
+        clearInterval(autoPlayInterval);
+    }
+
+    // --- LIGHTBOX LOGIC ---
+    function openLightbox(imgElement) {
+        stopAutoPlay();
+        const modal = document.getElementById("photoModal");
+        const modalImg = document.getElementById("fullImage");
+        const captionText = document.getElementById("caption");
+
+        modal.style.display = "flex";
+        modalImg.src = imgElement.src;
+        captionText.innerHTML = imgElement.alt;
+    }
+
+    function closeLightbox() {
+        document.getElementById("photoModal").style.display = "none";
+        startAutoPlay();
+    }
+
+    // --- INITIALIZATION ---
+    document.addEventListener('DOMContentLoaded', () => {
+        startAutoPlay();
+
+        // Attach click events to images for Lightbox
+        const images = document.querySelectorAll('.photo-item img');
+        images.forEach(img => {
+            img.onclick = () => openLightbox(img);
+        });
+
+        // Pause on Hover
+        const wrapper = document.querySelector('.slider-wrapper');
+        wrapper.addEventListener('mouseenter', stopAutoPlay);
+        wrapper.addEventListener('mouseleave', startAutoPlay);
+
+        // Close Lightbox on ESC key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === "Escape") closeLightbox();
+        });
+    });
+</script>
+
+    <footer id="contact">
+        <div class="footer-content">
+            <div>
+                <h3>Find Us</h3>
+                <p> Mumbai - Goa Hwy, </p>
+                <p>Chambhar Khind, Mahad, </p>
+                <p>Maharashtra 402301</p>
+            </div>
+            <div>
+                <h3>Contact Info</h3>
+                <p>Phone: +91 7350721111</p>
+                <p>Email: contact@pcranes.com</p>
+                <p>Available for Dispatch: 24/7</p>
+            </div>
+            <div>
+                <h3>Quick Links</h3>
+                <p><a href="#about" style="color: #ccc; text-decoration: none;">Our Story</a></p>
+                <p><a href="#photos" style="color: #ccc; text-decoration: none;">Project Gallery</a></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Parth Chorge Crane and Towing Service
+. All Rights Reserved. Safety First.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Change Nav appearance on scroll
+        window.onscroll = function() {
+            const nav = document.getElementById('main-nav');
+            if (window.pageYOffset > 100) {
+                nav.style.background = '#000';
+                nav.style.padding = '0.7rem 5%';
+            } else {
+                nav.style.background = '#1a1a1a';
+                nav.style.padding = '1rem 5%';
+            }
+        };
+
+        // Scroll Reveal effect for cards
+        const observerOptions = { threshold: 0.1 };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.card').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            card.style.transition = '0.6s ease-out';
+            observer.observe(card);
+        });
+    </script>
+</body>
+</html>
